@@ -1,0 +1,25 @@
+@prefix :       <http://dilab77.ionio.gr/swp/c17kour/vocab#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+ :Διάλεξη     rdf:type           rdfs:Class .
+ :Καθηγητής   rdf:type           rdfs:Class .
+ :Μάθημα      rdf:type           rdfs:Class .
+ :Αίθουσα     rdf:type           rdfs:Class .
+ 
+ :Καθηγητής   rdfs:subClassOf    foaf:Person .
+
+ :Καθηγητής   rdf:type           rdf:Property .
+ :Διάλεξη     rdf:type           rdf:Property .
+ :Αίθουσα     rdf:type           rdf:Property .
+ :Μάθημα      rdf:type           rdf:Property .
+
+ :Καθηγητής   rdfs:domain        :Διάλεξη .
+ :Αίθουσα     rdfs:domain        :Διάλεξη .
+ :Μάθημα      rdfs:domain        :Διάλεξη .
+
+ :Καθηγητής   rdfs:range         xsd:String .
+ :Αίθουσα     rdfs:range         xsd:String .
+ :Μάθημα      rdfs:range         xsd:String .
